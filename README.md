@@ -1,3 +1,27 @@
+
+
+# blockchain explorer
+
+
+## quickstart:
+
+- compose-app.yml
+
+
+```bash 
+
+make 
+
+```
+
+
+## docker hub images:
+
+- https://hub.docker.com/repository/docker/betterblockchain/blockscout
+
+
+
+
 ## [WIP] - BlockScout Docker Compose
 
 This repository contains Docker Compose resources to run BlockScout, an open source Ethereum blockchain explorer. Still work in progress. I'm testing using Goerli testnet here.

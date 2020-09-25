@@ -3,7 +3,6 @@ version: '3'
 services:
   # db:
   postgres:
-    image:
     build:
       context: .
       dockerfile: DockerfilePostgres

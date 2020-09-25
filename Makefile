@@ -1,4 +1,6 @@
 
+include ./Makefile.build.mk
+
 
 
 run:
@@ -8,7 +10,6 @@ run:
 restart:
 	docker-compose -f ./compose-app.yml restart
 	docker-compose -f ./compose-app.yml ps
-
 
 
 stop:
