@@ -7,18 +7,19 @@
 
 - compose-app.yml
 
-
 ```bash 
 
-make 
+make run
 
 ```
+
+- web-ui: `open http://localhost:16001`
+
 
 
 ## docker hub images:
 
 - https://hub.docker.com/repository/docker/betterblockchain/blockscout
-
 
 
 

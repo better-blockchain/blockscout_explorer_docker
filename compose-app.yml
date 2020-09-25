@@ -4,6 +4,7 @@ services:
   # db:
   postgres:
     image: betterblockchain/blockscout:pg-0.1.0
+    container_name: chain-postgres
     restart: "no"
     expose:
       - "5432"
@@ -11,6 +12,7 @@ services:
   # web ui:
   explorer:
     image: betterblockchain/blockscout:explorer-0.1.0
+    container_name: chain-explorer
     restart: "no"
     tty: true
     environment:
