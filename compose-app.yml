@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  # db:
+  postgres:
+    build:
+      context: .
+      dockerfile: DockerfilePostgres
+    restart: "no"
+    expose:
+      - "5432"
+
+  # web ui:
+  explorer:
+    build:
+      context: .
+      dockerfile: DockerfileExplorer
+    restart: "no"
+    tty: true
+    environment:
+      - DATABASE_URL=ecto://postgres:@postgres/explorer?ssl=false
+      - ETHEREUM_JSONRPC_HTTP_URL=http://host.docker.internal:8545
+      - ETHEREUM_JSONRPC_WS_URL=ws://host.docker.internal:8546
+    ports:
+      - "16001:4000"
+    depends_on:
+      - postgres
