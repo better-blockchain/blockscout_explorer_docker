@@ -1,7 +1,8 @@
 
 include ./Makefile.build.mk
+include ./Makefile.local.mk
 
-
+#######################################################################################
 
 run:
 	docker-compose -f ./compose-app.yml up -d
@@ -18,6 +19,13 @@ stop:
 
 log:
 	docker-compose -f ./compose-app.yml logs -f -t
+
+
+#######################################################################################
+
+
+git-push:
+	git push origin fix:fix --tags
 
 
 
